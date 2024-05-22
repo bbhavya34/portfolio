@@ -7,12 +7,12 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "mfuu4zxk05");
-</script>
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "luzsr01iba");
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
   <link rel="icon" href="logo.jpg" type="image/png">
 
@@ -45,12 +45,13 @@
       color: var(--text-color);
     }
 
+
     .theme-toggle {
       position: fixed;
       top: 10px;
-      right: 260px;
+      right: 10px;
       padding-top: 10px;
-      z-index: 1000;
+      z-index: auto;
       cursor: pointer;
     }
 
@@ -66,6 +67,41 @@
     body.dark-mode .theme-toggle i {
       color: #fff;
     }
+
+    /* Add these styles to your existing CSS */
+    .tooltip {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 5px;
+      /* Adjust as needed */
+      padding: 5px 10px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 12px;
+      white-space: nowrap;
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .tooltip::after {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent #333 transparent;
+    }
+
+    .tooltip.hidden {
+      display: none;
+    }
+
+
 
     .section-heading {
       color: var(--text-color);
@@ -133,20 +169,22 @@
 <body class="light-mode">
   <article data-clarity-region="article">
     <header class="bg-transparent shadow">
-      <nav class="container mx-auto px-4 py-2 flex items-center justify-between">
+      <nav class="container mx-auto px-4 py-2 flex items-center justify-between nav-container">
         <div>
           <h1 class="text-lg font-bold">Bhavya Bhatt</h1>
           <p class="text-sm text-gray-500">Class 12th | Science Stream</p>
         </div>
-        <ul class="flex space-x-4">
+        <ul class="flex space-x-4 items-center">
           <li><a href="#about" class="text-gray-200 hover:text-gray-400 font-semibold section-heading">About</a></li>
           <li><a href="#projects" class="text-gray-200 hover:text-gray-400 font-semibold section-heading">Projects</a>
           </li>
           <li><a href="#contact" class="text-gray-200 hover:text-gray-400 font-semibold section-heading">Contact</a>
           </li>
           <li>
-            <div class="theme-toggle ml-2" onclick="toggleTheme()">
+            <div class="theme-toggle ml-2" onmouseover="showTooltip()" onmouseout="hideTooltip()"
+              onclick="toggleTheme()">
               <i class="far fa-moon"></i>
+              <div id="tooltip" class="tooltip hidden">Switch to Dark Mode</div>
             </div>
           </li>
         </ul>
@@ -174,7 +212,7 @@
         var typed = new Typed('#typed-text', {
           strings: ['Hello, I\'m Bhavya Bhatt, a class 12th student at Kendriya Vidyalaya Pragati Vihar, pursuing PCM+CS.', 'I have a passion for computer science and technology, which led me to choose this stream in my studies.', 'In addition to my academic achievements, I actively participate in extracurricular activities.', 'One notable accomplishment was securing the 2nd position in the SLSMEE exhibition, where I showcased my skills and knowledge in computer science and technology.', 'I am proficient in Python programming language, which allows me to develop innovative solutions and explore various aspects of computer science.', 'Beyond my academic pursuits, I have a diverse range of hobbies and interests.', 'While I haven\'t participated in any internships, workshops, or training programs yet, I am eager to explore these opportunities in the future to further develop my skills and gain practical experience.', 'As I look ahead, I have ambitious career goals in the field of computer science and technology. I aspire to make a positive impact by contributing to technological advancements and innovation.', 'Thank you for visiting my portfolio website. Feel free to explore and get in touch with me if you have any inquiries or collaboration opportunities.'],
           typeSpeed: 15,
-          backSpeed: 10,
+          backSpeed: 60,
           loop: true
         });
       </script>
@@ -191,14 +229,14 @@
 
     <section id="education" class="mb-8">
       <h2 class="text-2xl font-bold mb-4 section-heading">Education</h2>
-      <div class="flex flex-wrap">
-        <div class="w-full md:w-1/2 mb-4 md:pr-2">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="mb-4">
           <h3 class="text-xl font-semibold">Kendriya Vidyalaya Pragati Vihar</h3>
           <p class="text-gray-700-bold">Class 12th | Science Stream (PCM+CS)</p>
           <p class="text-gray-700-bold">2023 - 2024</p>
           <p class="text-gray-700-bold">Passing Percentage: 92.8%</p>
         </div>
-        <div class="w-full md:w-1/2 mb-4 md:pl-2">
+        <div class="mb-4">
           <h3 class="text-xl font-semibold">Kendriya Vidyalaya Pragati Vihar</h3>
           <p class="text-gray-700-bold">Class 10th</p>
           <p class="text-gray-700-bold">2021 - 2022</p>
@@ -206,21 +244,23 @@
         </div>
       </div>
     </section>
-    
+
+
     <section id="achievements" class="mb-8">
       <h2 class="text-2xl font-bold mb-4 section-heading">Achievements</h2>
       <ul class="list-disc list-inside">
         <li class="mb-4">
-          <strong>Secured 2nd position in the SLSMEE exhibition:</strong> 
-          <span class="block text-black-700">For showcasing skills in computer science and technology. 
-          My project involved developing a Vedic Maths Tutorial application using the Python GUI library, Tkinter. 
-          This project  is an educational project aimed at teaching children about Vedic mathematics. The project provides interactive lessons and practice exercises to help children improve their mathematical skills through the application of Vedic math techniques.</span>
+          <strong>Secured 2nd position in the SLSMEE exhibition:</strong>
+          <span class="block text-black-700">For showcasing skills in computer science and technology.
+            My project involved developing a Vedic Maths Tutorial application using the Python GUI library, Tkinter.
+            This project is an educational project aimed at teaching children about Vedic mathematics. The project
+            provides interactive lessons and practice exercises to help children improve their mathematical skills
+            through the application of Vedic math techniques.</span>
         </li>
-        <!-- Add more achievements as needed -->
       </ul>
     </section>
-    
-    
+
+
 
     <section id="projects" class="mb-8">
       <h2 class="text-2xl font-bold mb-4 section-heading">Projects</h2>
@@ -320,7 +360,12 @@
 
         <div class="project 3 bg-white p-4 shadow">
           <h3 class="text-lg font-bold mb-2 project-heading">Hotel Management system</h3>
-          <p class="text-gray-700-bold">This Python project showcases a Hotel Management System, leveraging MySQL as the backend database. Users can execute a range of functions including adding/removing customers, booking/canceling rooms, and displaying customer details and bookings. The system adopts a user-friendly menu-driven interface, offering seamless navigation through its diverse functionalities. It serves as a hands-on example illustrating the integration of Python with a relational database for streamlined management of hotel operations.</p>
+          <p class="text-gray-700-bold">This Python project showcases a Hotel Management System, leveraging MySQL as the
+            backend database. Users can execute a range of functions including adding/removing customers,
+            booking/canceling rooms, and displaying customer details and bookings. The system adopts a user-friendly
+            menu-driven interface, offering seamless navigation through its diverse functionalities. It serves as a
+            hands-on example illustrating the integration of Python with a relational database for streamlined
+            management of hotel operations.</p>
           <div class="mt-4">
             <a href="hotel_management.zip"
               class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Download
@@ -328,25 +373,25 @@
           </div>
         </div>
 
-      </section>
-        <section id="contact">
-          <h2 class="text-2xl font-bold mb-4 section-heading">Contact Me</h2>
-          <ul class="list-disc list-inside mb-4">
-            <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=bhavya.2006@gmail.com"
-                class="text-blue-500 hover:underline">Email: bhavya.2006@gmail.com</a></li>
+    </section>
+    <section id="contact">
+      <h2 class="text-2xl font-bold mb-4 section-heading">Contact Me</h2>
+      <ul class="list-disc list-inside mb-4">
+        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=bhavya.2006@gmail.com"
+            class="text-blue-500 hover:underline">Email: bhavya.2006@gmail.com</a></li>
 
-            <li><a href="https://www.instagram.com/bbhavya34/" target="_blank" rel="noopener noreferrer"
-                class="text-blue-500 hover:underline">Instagram: @bbhavya34</a></li>
-            <li><a href="https://github.com/bbhavya34" target="_blank" rel="noopener noreferrer"
-                class="text-blue-500 hover:underline">Github: bbhavya34</a></li>
+        <li><a href="https://www.instagram.com/bbhavya34/" target="_blank" rel="noopener noreferrer"
+            class="text-blue-500 hover:underline">Instagram: @bbhavya34</a></li>
+        <li><a href="https://github.com/bbhavya34" target="_blank" rel="noopener noreferrer"
+            class="text-blue-500 hover:underline">Github: bbhavya34</a></li>
 
-            <li><a href="https://replit.com/@bbhavya34" target="_blank" rel="noopener noreferrer"
-                class="text-blue-500 hover:underline">replit: bbhavya34</a></li>
-          </ul>
-          <form class="max-w-sm">
-            <!-- Form fields go here -->
-          </form>
-        </section>
+        <li><a href="https://replit.com/@bbhavya34" target="_blank" rel="noopener noreferrer"
+            class="text-blue-500 hover:underline">replit: bbhavya34</a></li>
+      </ul>
+      <form class="max-w-sm">
+        <!-- Form fields go here -->
+      </form>
+    </section>
 
   </main>
   <footer class="bg-transparent py-4 text-center">
@@ -363,13 +408,28 @@
       localStorage.setItem('theme', isDarkMode ? 'dark-mode' : 'light-mode');
 
       const icon = document.querySelector('.theme-toggle i');
+      const tooltip = document.getElementById('tooltip');
       if (isDarkMode) {
         icon.classList.remove('fa-moon');
         icon.classList.add('fa-sun');
+        tooltip.textContent = 'Switch to Light Mode';
       } else {
         icon.classList.remove('fa-sun');
         icon.classList.add('fa-moon');
+        tooltip.textContent = 'Switch to Dark Mode';
       }
+    }
+
+    function showTooltip() {
+      const tooltip = document.getElementById('tooltip');
+      tooltip.classList.remove('hidden');
+      tooltip.style.opacity = 1;
+    }
+
+    function hideTooltip() {
+      const tooltip = document.getElementById('tooltip');
+      tooltip.style.opacity = 0;
+      setTimeout(() => tooltip.classList.add('hidden'), 300);
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -377,15 +437,20 @@
       document.body.classList.add(savedTheme);
 
       const icon = document.querySelector('.theme-toggle i');
+      const tooltip = document.getElementById('tooltip');
       if (savedTheme === 'dark-mode') {
         icon.classList.remove('fa-moon');
         icon.classList.add('fa-sun');
+        tooltip.textContent = 'Switch to Light Mode';
       } else {
         icon.classList.remove('fa-sun');
         icon.classList.add('fa-moon');
+        tooltip.textContent = 'Switch to Dark Mode';
       }
     });
+
   </script>
+
   </article>
 </body>
 
