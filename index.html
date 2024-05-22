@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "luzsr01iba");
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+  <link rel="icon" href="logo.jpg" type="image/png">
+
+  <title>Bhavya Bhatt - Portfolio</title>
+  <style>
+    :root {
+      --background-color: #ffffff;
+      --text-color: #000000;
+    }
+
+    body.light-mode {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    body.dark-mode {
+      --background-color: #000000;
+      --text-color: #ffffff;
+    }
+
+    body.dark-mode {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 260px;
+      padding-top: 10px;
+      z-index: 1000;
+      cursor: pointer;
+    }
+
+    .theme-toggle i {
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    body.light-mode .theme-toggle i {
+      color: #000;
+    }
+
+    body.dark-mode .theme-toggle i {
+      color: #fff;
+    }
+
+    .section-heading {
+      color: var(--text-color);
+    }
+
+    .text-gray-700 {
+      color: #CCCCCC;
+    }
+
+    .text-gray-200 {
+      color: #999999;
+    }
+
+    .text-gray-500 {
+      color: #CCCCCC;
+    }
+
+    .text-blue-500 {
+      color: #3399FF;
+    }
+
+    .hover\:text-gray-400:hover {
+      color: #B3B3B3;
+    }
+
+    .hover\:text-gray-400:focus {
+      color: #B3B3B3;
+    }
+
+    .hover\:text-blue-400:hover {
+      color: #0066CC;
+    }
+
+    .hover\:text-blue-400:focus {
+      color: #0066CC;
+    }
+
+    .bg-transparent {
+      background-color: transparent;
+    }
+
+    .bg-white {
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    .bg-blue-500 {
+      background-color: #3399FF;
+    }
+
+    .hover\:bg-blue-600:hover {
+      background-color: #0066CC;
+    }
+
+    .hover\:bg-blue-600:focus {
+      background-color: #0066CC;
+    }
+
+    .project-heading {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body class="light-mode">
+  <article data-clarity-region="article">
+    <header class="bg-transparent shadow">
+      <nav class="container mx-auto px-4 py-2 flex items-center justify-between">
+        <div>
+          <h1 class="text-lg font-bold">Bhavya Bhatt</h1>
+          <p class="text-sm text-gray-500">Class 12th | Science Stream</p>
+        </div>
+        <ul class="flex space-x-4">
+          <li><a href="#about" class="text-gray-200 hover:text-gray-400 font-semibold section-heading">About</a></li>
+          <li><a href="#projects" class="text-gray-200 hover:text-gray-400 font-semibold section-heading">Projects</a>
+          </li>
+          <li><a href="#contact" class="text-gray-200 hover:text-gray-400 font-semibold section-heading">Contact</a>
+          </li>
+          <li>
+            <div class="theme-toggle ml-2" onclick="toggleTheme()">
+              <i class="far fa-moon"></i>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </article>
+
+
+
+  <main class="container mx-auto px-4 py-8">
+    <section id="about" class="mb-8">
+      <h2 class="text-3xl font-bold mb-4 section-heading">About Me</h2>
+      <p id="typed-text" class="about-text"></p>
+      <p class="text-gray-700 bold">
+        <!-- Square buttons -->
+      <div class="flex space-x-4">
+        <a href="#projects"
+          class="bg-white text-blue-500 py-2 px-4 rounded-md hover:bg-blue-600 hover:text-white border border-blue-500 hover:border-blue-600">Explore
+          Projects</a>
+        <a href="#contact"
+          class="bg-white text-blue-500 py-2 px-4 rounded-md hover:bg-blue-600 hover:text-white border border-blue-500 hover:border-blue-600">Contact</a>
+      </div>
+      </p>
+      <script>
+        var typed = new Typed('#typed-text', {
+          strings: ['Hello, I\'m Bhavya Bhatt, a class 12th student at Kendriya Vidyalaya Pragati Vihar, pursuing PCM+CS.', 'I have a passion for computer science and technology, which led me to choose this stream in my studies.', 'In addition to my academic achievements, I actively participate in extracurricular activities.', 'One notable accomplishment was securing the 2nd position in the SLSMEE exhibition, where I showcased my skills and knowledge in computer science and technology.', 'I am proficient in Python programming language, which allows me to develop innovative solutions and explore various aspects of computer science.', 'Beyond my academic pursuits, I have a diverse range of hobbies and interests.', 'While I haven\'t participated in any internships, workshops, or training programs yet, I am eager to explore these opportunities in the future to further develop my skills and gain practical experience.', 'As I look ahead, I have ambitious career goals in the field of computer science and technology. I aspire to make a positive impact by contributing to technological advancements and innovation.', 'Thank you for visiting my portfolio website. Feel free to explore and get in touch with me if you have any inquiries or collaboration opportunities.'],
+          typeSpeed: 15,
+          backSpeed: 10,
+          loop: true
+        });
+      </script>
+    </section>
+
+    <section id="skills" class="mb-8">
+      <h2 class="text-2xl font-bold mb-4 section-heading">Skills</h2>
+      <ul class="list-disc list-inside">
+        <li class="mb-2">Python Programming</li>
+        <!-- <li class="mb-2">Web Development (HTML, CSS, JavaScript)</li> -->
+        <li class="mb-2">Database Management (MySQL)</li>
+      </ul>
+    </section>
+
+    <section id="education" class="mb-8">
+      <h2 class="text-2xl font-bold mb-4 section-heading">Education</h2>
+      <div class="flex flex-wrap">
+        <div class="w-full md:w-1/2 mb-4 md:pr-2">
+          <h3 class="text-xl font-semibold">Kendriya Vidyalaya Pragati Vihar</h3>
+          <p class="text-gray-700-bold">Class 12th | Science Stream (PCM+CS)</p>
+          <p class="text-gray-700-bold">2023 - 2024</p>
+          <p class="text-gray-700-bold">Passing Percentage: 92.8%</p>
+        </div>
+        <div class="w-full md:w-1/2 mb-4 md:pl-2">
+          <h3 class="text-xl font-semibold">Kendriya Vidyalaya Pragati Vihar</h3>
+          <p class="text-gray-700-bold">Class 10th</p>
+          <p class="text-gray-700-bold">2021 - 2022</p>
+          <p class="text-gray-700-bold">Passing Percentage: 89.8%</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="achievements" class="mb-8">
+      <h2 class="text-2xl font-bold mb-4 section-heading">Achievements</h2>
+      <ul class="list-disc list-inside">
+        <li class="mb-4">
+          <strong>Secured 2nd position in the SLSMEE exhibition:</strong> 
+          <span class="block text-black-700">For showcasing skills in computer science and technology. 
+          My project involved developing a Vedic Maths Tutorial application using the Python GUI library, Tkinter. 
+          This project  is an educational project aimed at teaching children about Vedic mathematics. The project provides interactive lessons and practice exercises to help children improve their mathematical skills through the application of Vedic math techniques.</span>
+        </li>
+        <!-- Add more achievements as needed -->
+      </ul>
+    </section>
+    
+    
+
+    <section id="projects" class="mb-8">
+      <h2 class="text-2xl font-bold mb-4 section-heading">Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-vedic-maths p-4 shadow">
+          <h3 class="text-lg font-bold mb-2 project-heading">Vedic Maths Tutorial</h3>
+          <p class="text-gray-700-bold">Vedic Maths Tutorial is an educational project aimed at teaching children
+            about
+            Vedic
+            mathematics. It is developed using the Python GUI library, Tkinter. The project provides interactive
+            lessons
+            and practice exercises to help children improve their mathematical skills through the application of Vedic
+            math techniques.</p>
+          <div class="mt-4">
+            <a href="vedic maths.zip" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Download
+              Source Code (ZIP)</a>
+          </div>
+        </div>
+        <div class="project2 bg-white p-4 shadow">
+          <h3 class="text-lg font-bold mb-2 project-heading">Basic Billing Software</h3>
+          <p class="text-gray-700-bold">Basic Billing Software is a project developed using Python fundamentals. It is
+            designed to help class 11th students understand the basics of programming and create a simple billing
+            system. The software allows users to generate bills, calculate totals, and manage customer transactions
+            and
+            also give invoices.</p>
+          <div class="mt-4">
+            <a href="XIComp.Sc.262.zip" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Download
+              Source Code (ZIP)</a>
+          </div>
+
+        </div>
+        <div class="project 3 bg-white p-4 shadow">
+          <h3 class="text-lg font-bold mb-2 project-heading">Conversion between number system</h3>
+          <p class="text-gray-700-bold">The given code converts numbers between
+            different number systems. It provides options to convert numbers from binary, octal, and hexadecimal
+            systems to decimal, as well as converting decimal numbers to binary, octal, and hexadecimal representations.
+            The
+            program prompts the user to choose a conversion type and the number of digits in the input. It then
+            collects
+            the input digits and performs the conversion accordingly. However, the code seems to have some logical
+            errors and redundancy in collecting user input. It could be improved for better functionality and
+            readability..</p>
+          <div class="mt-4">
+            <a href="Conversion between number system.zip"
+              class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Download
+              Source Code (ZIP)</a>
+          </div>
+        </div>
+
+        <div class="project4 bg-white p-4 shadow">
+          <h3 class="text-lg font-bold mb-2 project-heading">Simple calculator using python module</h3>
+          <p class="text-gray-700-bold">The provided code presents a simple calculator program that allows users to
+            input various operands and operators to perform mathematical operations. The calculator supports basic
+            arithmetic operations such as addition, subtraction, multiplication, and division. Additionally, it
+            includes
+            features to calculate the square root of numbers, raise numbers to a power, and find the mean of a given
+            set
+            of numbers. The program utilizes the math and statistics modules from the Python standard library to
+            perform
+            these calculations. The calculator operates in a loop, allowing users to perform multiple calculations
+            until
+            they choose to exit by entering '0'. Overall, this calculator provides a basic yet versatile tool for
+            performing various mathematical operations..</p>
+          <div class="mt-4">
+            <a href="XIComp.Sc.262.zip" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Download
+              Source Code (ZIP)</a>
+          </div>
+        </div>
+        <div class="project 5 bg-white p-4 shadow">
+          <h3 class="text-lg font-bold mb-2 project-heading">School Mangagement System</h3>
+          <p class="text-gray-700-bold">The provided code constitutes a straightforward school management system
+            employing MySQL database integration and user input/output. It facilitates core functionalities including
+            student and teacher management, attendance tracking, fee submission, salary payments, and class
+            information display. With its menu-driven interface, users can effortlessly navigate through the system's
+            diverse features, enhancing usability and efficiency..</p>
+          <div class="mt-4">
+            <a href="school_management.zip"
+              class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Download
+              Source Code (ZIP)</a>
+          </div>
+        </div>
+
+        <div class="project 6 bg-white p-4 shadow">
+          <h3 class="text-lg font-bold mb-2 project-heading">Hospital Mangagement System</h3>
+          <p class="text-gray-700-bold">The provided code is a comprehensive hospital management system built to
+            efficiently handle doctor, patient, and appointment data through MySQL integration. It facilitates
+            essential operations such as doctor and patient management, appointment scheduling and cancellation, and
+            provides easy access to detailed information about doctors and patients. The system is designed with a
+            user-friendly menu-driven interface, ensuring seamless navigation across its diverse functionalities.</p>
+          <div class="mt-4">
+            <a href="hospital_management.zip"
+              class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Download
+              Source Code (ZIP)</a>
+          </div>
+        </div>
+
+
+        <div class="project 3 bg-white p-4 shadow">
+          <h3 class="text-lg font-bold mb-2 project-heading">Hotel Management system</h3>
+          <p class="text-gray-700-bold">This Python project showcases a Hotel Management System, leveraging MySQL as the backend database. Users can execute a range of functions including adding/removing customers, booking/canceling rooms, and displaying customer details and bookings. The system adopts a user-friendly menu-driven interface, offering seamless navigation through its diverse functionalities. It serves as a hands-on example illustrating the integration of Python with a relational database for streamlined management of hotel operations.</p>
+          <div class="mt-4">
+            <a href="hotel_management.zip"
+              class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Download
+              Source Code (ZIP)</a>
+          </div>
+        </div>
+
+      </section>
+        <section id="contact">
+          <h2 class="text-2xl font-bold mb-4 section-heading">Contact Me</h2>
+          <ul class="list-disc list-inside mb-4">
+            <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=bhavya.2006@gmail.com"
+                class="text-blue-500 hover:underline">Email: bhavya.2006@gmail.com</a></li>
+
+            <li><a href="https://www.instagram.com/bbhavya34/" target="_blank" rel="noopener noreferrer"
+                class="text-blue-500 hover:underline">Instagram: @bbhavya34</a></li>
+            <li><a href="https://github.com/bbhavya34" target="_blank" rel="noopener noreferrer"
+                class="text-blue-500 hover:underline">Github: bbhavya34</a></li>
+
+            <li><a href="https://replit.com/@bbhavya34" target="_blank" rel="noopener noreferrer"
+                class="text-blue-500 hover:underline">replit: bbhavya34</a></li>
+          </ul>
+          <form class="max-w-sm">
+            <!-- Form fields go here -->
+          </form>
+        </section>
+
+  </main>
+  <footer class="bg-transparent py-4 text-center">
+    <p class="text-gray-200">Copyright &copy; 2024 Bhavya Bhatt</p>
+  </footer>
+
+  <script>
+
+    function toggleTheme() {
+      const body = document.body;
+      const isDarkMode = body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode', !isDarkMode);
+
+      localStorage.setItem('theme', isDarkMode ? 'dark-mode' : 'light-mode');
+
+      const icon = document.querySelector('.theme-toggle i');
+      if (isDarkMode) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme') || 'light-mode';
+      document.body.classList.add(savedTheme);
+
+      const icon = document.querySelector('.theme-toggle i');
+      if (savedTheme === 'dark-mode') {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    });
+  </script>
+  </article>
+</body>
+
+</html>
